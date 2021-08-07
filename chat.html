@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Admin Panel" />
+  <meta name="author" content="MiladShahsavari" />
+  <title>پنل مدیریت | چت</title>
+  <!--====== ↓ Styles ↓ ======-->
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/fontawesome.min.css">
+  <link rel="stylesheet" href="assets/css/fonts.css">
+  <link rel="stylesheet" href="assets/css/reset.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+  <!--====== ↓ Favicon ↓ ======-->
+  <link rel="icon" href="assets/images/favicon.png">
+</head>
+
+<body class="d-flex flex-column min-vh-100">
+
+  <!--======= ↓ Start Header ↓ =======-->
+  <header class="position-fixed fixed-top">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-12 px-0">
+          <nav class="navbar main-navbar d-flex">
+            <div class="main-navbar__right col-sm-9 d-flex align-items-center p-0">
+              <span class="main-navbar__right--logo">
+                <h5>پنل مدیریت</h5>
+              </span> <!-- end main-navbar__right--logo -->
+
+              <a class="nav-link sidebar-toggler__button plus">
+                <span class="sidebar-toggler"></span>
+              </a> <!-- end sidebar-toggler__button -->
+
+              <form class="form-inline main-navbar__search mr-4">
+                <div class="input-group w-100">
+                  <div class="input-group-prepend d-flex align-items-center w-100">
+                    <input class="form-control input-style border-0 position-relative w-100" type="search"
+                      placeholder="جستجو ..." aria-label="Search">
+                    <div
+                      class="input-group-text bg-transparent border-0 position-absolute p-0 main-navbar__search--btn">
+                      <button type="submit" class="btn d-flex"><i class="fas fa-search text-secondary"></i></button>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div> <!-- end main-navbar__right -->
+
+            <div class="main-navbar__left col-sm-3 d-flex justify-content-end p-0 mt-3 mt-sm-0">
+              <ul class="d-flex align-items-center">
+
+                <li class="dropdown position-relative">
+                  <a href="#!" class="text-light position-relative dropdown-toggle" data-toggle="dropdown">
+                    <i class="fas fa-bell header-notifications--icon"></i>
+                    <span
+                      class="badge badge-danger rounded-circle header-notifications--badge position-absolute">7</span>
+                  </a>
+
+                  <div class="dropdown-menu header-dropdown__menu p-0 dropdown-slideIn dropdown-animate"
+                    id="header-dropdown__menu">
+                    <div class="position-relative header-dropdown__menu--content">
+                      <h5
+                        class="dropdown-item notifications-title d-flex justify-content-between align-items-center my-2 px-3 py-2"
+                        href="#">
+                        <span>اعلان ها</span>
+                        <a href="#!" class="text-light">
+                          <small>خواندن همه</small>
+                        </a>
+                      </h5>
+
+                      <div class="slimscroll-box">
+                        <a class="dropdown-item header-dropdown__item d-flex align-items-center" href="#">
+                          <span
+                            class="notifications-icon bg-warning rounded-pill d-flex align-items-center justify-content-center">
+                            <i class="fas fa-user-plus"></i>
+                          </span>
+                          <p class="notifications-details d-flex flex-column mr-2">
+                            کاربر جدید ثبت نام کرد
+                            <span class="notifications-details--footer">38 دقیقه
+                              پیش</span>
+                          </p>
+                        </a>
+
+                        <a class="dropdown-item header-dropdown__item d-flex align-items-center" href="#">
+                          <span class="notifications-icon rounded-pill">
+                            <img src="assets/images/user1.jpg" class="rounded-pill mw-100" alt="">
+                          </span>
+                          <p class="notifications-details d-flex flex-column mr-2">
+                            رضا محمدی
+                            <span class="notifications-details--footer">سلام ممنون پست
+                              خوبی بود</span>
+                          </p>
+                        </a>
+
+                        <a class="dropdown-item header-dropdown__item d-flex align-items-center" href="#">
+                          <span class="notifications-icon rounded-pill">
+                            <img src="assets/images/user2.jpg" class="rounded-pill mw-100" alt="">
+                          </span>
+                          <div class="notifications-details d-flex flex-column mr-2">
+                            علی حسینی
+                            <p class="notifications-details--footer">در دوره جاوا
+                              اسکریپت ثبت نام کرد </p>
+                          </div>
+                        </a>
+
+                        <a class="dropdown-item header-dropdown__item d-flex align-items-center" href="#">
+                          <span class="notifications-icon rounded-pill">
+                            <img src="assets/images/user4.png" class="rounded-pill mw-100" alt="">
+                          </span>
+                          <div class="notifications-details d-flex flex-column mr-2">
+                            محمد غلامی
+                            <p class="notifications-details--footer">ممنون پست خوبی بود
+                            </p>
+                          </div>
+                        </a>
+
+                        <a class="dropdown-item header-dropdown__item d-flex align-items-center" href="#">
+                          <span class="notifications-icon rounded-pill">
+                            <img src="assets/images/user3.jpg" class="rounded-pill mw-100" alt="">
+                          </span>
+                          <div class="notifications-details d-flex flex-column mr-2">
+                            زهرا محمدی
+                            <p class="notifications-details--footer">در دوره جاوا
+                              اسکریپت ثبت نام کرد </p>
+                          </div>
+                        </a>
+
+                      </div>
+
+                      <a class="dropdown-item header-dropdown__item notifications-view text-center text-primary py-3"
+                        href="#">مشاهده
+                        همه</a>
+                    </div> <!-- position-relative -->
+                  </div> <!-- end dropdown-menu -->
+
+                </li> <!-- end dropdown -->
+
+                <li class="dropdown mr-3 position-relative">
+                  <a href="#!" class="text-light dropdown-toggle d-flex align-items-center" data-toggle="dropdown">
+                    <img src="assets/images/admin.jpg" class="header-admin__img rounded-pill" alt="admin">
+                    <span class="text-light mx-1">
+                      میلاد
+                    </span>
+                    <i class="fas fa-angle-down"></i>
+                  </a>
+
+                  <div
+                    class="dropdown-menu header-dropdown__menu header-dropdown__profile p-0 h-auto dropdown-slideIn dropdown-animate">
+                    <a class="dropdown-item header-dropdown__item d-flex align-items-center" href="profile.html">
+                      <span class="rounded-pill d-flex align-items-center justify-content-center ml-2">
+                        <i class="far fa-user"></i>
+                      </span>
+                      <div class="notifications-details d-flex flex-column">
+                        پروفایل
+                      </div>
+                    </a>
+
+                    <a class="dropdown-item header-dropdown__item d-flex align-items-center" href="#">
+                      <span class="rounded-pill d-flex align-items-center justify-content-center ml-2">
+                        <i class="fas fa-cog"></i>
+                      </span>
+                      <div class="notifications-details d-flex flex-column">
+                        تنظیمات
+                      </div>
+                    </a>
+
+                    <a class="dropdown-item header-dropdown__item d-flex align-items-center" href="#">
+                      <span class="rounded-pill d-flex align-items-center justify-content-center ml-2">
+                        <i class="fas fa-lock"></i>
+                      </span>
+                      <div class="notifications-details d-flex flex-column">
+                        قفل کردن
+                      </div>
+                    </a>
+
+                    <a class="dropdown-item header-dropdown__item d-flex align-items-center" href="#">
+                      <span class="rounded-pill d-flex align-items-center justify-content-center ml-2">
+                        <i class="fas fa-sign-out-alt"></i>
+                      </span>
+                      <div class="notifications-details d-flex flex-column">
+                        خروج
+                      </div>
+                    </a>
+
+
+
+                  </div> <!-- end dropdown-menu -->
+                </li> <!-- end dropdown -->
+
+              </ul>
+            </div> <!-- end main-navbar__left -->
+          </nav> <!-- end navbar -->
+        </div>
+      </div>
+    </div>
+  </header>
+  <!--======== ↑ End Header ↑ ========-->
+
+  <!--======= ↓ Start Wrapper ↓ =======-->
+  <div class="wrapper d-flex">
+    <!--===== ↓ Start Sidebar ↓ =====-->
+    <aside class="sidebar py-3 position-fixed slimscroll-box">
+      <div class="sidebar__user mb-3">
+        <div class="sidebar__user--img mx-auto">
+          <img src="assets/images/admin.jpg" alt="user-img" class="img-thumbnail rounded-pill sidebar__avatar">
+        </div> <!-- end sidebar__user--img -->
+        <div class="sidebar__usertitle d-flex flex-column justify-content-center mt-2">
+          <span class="sidebar__usertitle--name text-center font-weight-bold mb-2">
+            میلاد شهسواری
+          </span>
+          <span class="sidebar__usertitle--job text-center">
+            مدیر کل
+          </span>
+        </div> <!-- end sidebar__usertitle -->
+
+        <div class="sidebar__user--panel d-flex justify-content-center mt-3">
+          <a href="profile.html" class="mx-2" data-toggle="tooltip" data-placement="top" title="پروفایل">
+            <i class="far fa-user sidebar__user--panel-icon"></i>
+          </a>
+          <a href="chat.html" class="mx-2" data-toggle="tooltip" data-placement="top" title="چت">
+            <i class="far fa-comment-dots sidebar__user--panel-icon"></i>
+          </a>
+          <a href="login.html" class="mx-2" data-toggle="tooltip" data-placement="top" title="خروج">
+            <i class="fas fa-power-off sidebar__user--panel-icon"></i>
+          </a>
+        </div> <!-- end sidebar__user--panel -->
+      </div> <!-- end sidebar__user -->
+
+      <ul class="nav flex-column sidebar__menu ">
+        <li class="nav-item sidebar__menu--item">
+          <a class="nav-link sidebar__menu--link d-flex align-items-center" href="#">
+            <i class="fas fa-tachometer-alt mb-1 sidebar__menu--icon"></i>
+            <span class="flex-grow-1 mr-2">داشبورد</span>
+            <span class="sidebar__menu--arrow"></span>
+          </a> <!-- end sidebar__menu--link -->
+          <ul class="nav sidebar__menu--sub mr-4">
+            <li class="nav-item sidebar__menu--sub-item ">
+              <a class="nav-link sidebar__menu--sub-link" href="index.html">داشبورد اول</a>
+            </li>
+            <li class="nav-item sidebar__menu--sub-item">
+              <a class="nav-link sidebar__menu--sub-link" href="index2.html">داشبورد دوم</a>
+            </li>
+          </ul> <!-- end sidebar__menu--sub -->
+        </li> <!-- end sidebar__menu--item -->
+
+        <li class="nav-item sidebar__menu--item">
+          <a class="nav-link sidebar__menu--link d-flex align-items-center" href="#">
+            <i class="fas fa-envelope mb-1 sidebar__menu--icon"></i>
+            <span class="flex-grow-1 mr-2">ایمیل</span>
+            <div class="pulse"></div>
+            <span class="sidebar__menu--arrow"></span>
+          </a> <!-- end sidebar__menu--link -->
+          <ul class="nav sidebar__menu--sub mr-4">
+            <li class="nav-item sidebar__menu--sub-item">
+              <a class="nav-link sidebar__menu--sub-link" href="inbox.html">
+                صندوق ورودی
+              </a>
+            </li>
+            <li class="nav-item sidebar__menu--sub-item">
+              <a class="nav-link sidebar__menu--sub-link" href="compose.html">
+                ایجاد ایمیل
+              </a>
+            </li>
+            <li class="nav-item sidebar__menu--sub-item">
+              <a class="nav-link sidebar__menu--sub-link" href="inbox.html">
+                ارسال شده
+              </a>
+            </li>
+          </ul> <!-- end sidebar__menu--sub -->
+        </li> <!-- end sidebar__menu--item -->
+
+        <li class="nav-item sidebar__menu--item">
+          <a class="nav-link sidebar__menu--link d-flex align-items-center" href="#">
+            <i class="fas fa-file-alt mb-1 sidebar__menu--icon"></i>
+            <span class="flex-grow-1 mr-2">صفحات</span>
+            <span class="sidebar__menu--arrow"></span>
+          </a> <!-- end sidebar__menu--link -->
+          <ul class="nav sidebar__menu--sub mr-4">
+            <li class="nav-item sidebar__menu--sub-item">
+              <a class="nav-link sidebar__menu--sub-link" href="pages.html">
+                همه صفحات
+              </a>
+            </li>
+            <li class="nav-item sidebar__menu--sub-item">
+              <a class="nav-link sidebar__menu--sub-link" href="pageNew.html">
+                صفحه جدید
+              </a>
+            </li>
+          </ul> <!-- end sidebar__menu--sub -->
+        </li> <!-- end sidebar__menu--item -->
+
+        <li class="nav-item sidebar__menu--item">
+          <a class="nav-link sidebar__menu--link d-flex align-items-center" href="#">
+            <i class="fas fa-newspaper mb-1 sidebar__menu--icon"></i>
+            <span class="flex-grow-1 mr-2">نوشته ها</span>
+            <span class="sidebar__menu--arrow"></span>
+          </a> <!-- end sidebar__menu--link -->
+          <ul class="nav sidebar__menu--sub mr-4">
+            <li class="nav-item sidebar__menu--sub-item">
+              <a class="nav-link sidebar__menu--sub-link" href="posts.html">
+                همه نوشته ها
+              </a>
+            </li>
+            <li class="nav-item sidebar__menu--sub-item">
+              <a class="nav-link sidebar__menu--sub-link" href="postNew.html">
+                افزودن نوشته
+              </a>
+            </li>
+          </ul> <!-- end sidebar__menu--sub -->
+        </li> <!-- end sidebar__menu--item -->
+
+        <li class="nav-item sidebar__menu--item">
+          <a class="nav-link sidebar__menu--link d-flex align-items-center" href="comments.html">
+            <i class="fas fa-comments mb-1 sidebar__menu--icon"></i>
+            <span class="flex-grow-1 mr-2">نظرات</span>
+          </a> <!-- end sidebar__menu--link -->
+        </li> <!-- end sidebar__menu--item -->
+
+        <li class="nav-item sidebar__menu--item active">
+          <a class="nav-link sidebar__menu--link d-flex align-items-center" href="chat.html">
+            <i class="fas fa-comment-alt mb-1 sidebar__menu--icon"></i>
+            <span class="flex-grow-1 mr-2">چت</span>
+            <div class="pulse"></div>
+          </a> <!-- end sidebar__menu--link -->
+        </li> <!-- end sidebar__menu--item -->
+
+        <li class="nav-item sidebar__menu--item">
+          <a class="nav-link sidebar__menu--link d-flex align-items-center" href="#">
+            <i class="fas fa-users mb-1 sidebar__menu--icon"></i>
+            <span class="flex-grow-1 mr-2">کاربران</span>
+            <span class="sidebar__menu--arrow"></span>
+          </a> <!-- end sidebar__menu--link -->
+          <ul class="nav sidebar__menu--sub mr-4">
+            <li class="nav-item sidebar__menu--sub-item">
+              <a class="nav-link sidebar__menu--sub-link" href="users.html">
+                همه کاربران
+              </a>
+            </li>
+            <li class="nav-item sidebar__menu--sub-item">
+              <a class="nav-link sidebar__menu--sub-link" href="userNew.html">
+                افزودن کاربر جدید
+              </a>
+            </li>
+            <li class="nav-item sidebar__menu--sub-item">
+              <a class="nav-link sidebar__menu--sub-link" href="profile.html">
+                پروفایل
+              </a>
+            </li>
+          </ul> <!-- end sidebar__menu--sub -->
+        </li> <!-- end sidebar__menu--item -->
+
+        <li class="nav-item sidebar__menu--item">
+          <a class="nav-link sidebar__menu--link d-flex align-items-center" href="#">
+            <i class="fas fa-plus-square mb-1 sidebar__menu--icon"></i>
+            <span class="flex-grow-1 mr-2">بیشتر</span>
+            <span class="sidebar__menu--arrow"></span>
+          </a> <!-- end sidebar__menu--link -->
+          <ul class="nav sidebar__menu--sub mr-4">
+            <li class="nav-item sidebar__menu--sub-item">
+              <a class="nav-link sidebar__menu--sub-link" href="404.html">
+                صفحه 404
+              </a>
+            <li class="nav-item sidebar__menu--sub-item">
+              <a class="nav-link sidebar__menu--sub-link" href="500.html">
+                صفحه 500
+              </a>
+            </li>
+            <li class="nav-item sidebar__menu--sub-item">
+              <a class="nav-link sidebar__menu--sub-link" href="lockScreen.html">
+                صفحه قفل
+              </a>
+            </li>
+            <li class="nav-item sidebar__menu--sub-item">
+              <a class="nav-link sidebar__menu--sub-link" href="register.html">
+                صفحه ثبت نام
+              </a>
+            </li>
+            <li class="nav-item sidebar__menu--sub-item">
+              <a class="nav-link sidebar__menu--sub-link" href="login.html">
+                صفحه ورود
+              </a>
+            </li>
+          </ul> <!-- end sidebar__menu--sub -->
+        </li> <!-- end sidebar__menu--item -->
+
+      </ul> <!-- end sidebar__menu -->
+
+    </aside>
+    <!--====== ↑ End Sidebar ↑ ======-->
+
+    <!--===== ↓ Start Main ↓ =====-->
+    <main class="main w-100">
+      <section class="container-fluid mt-4">
+        <div class="row">
+          <div class="col-12">
+            <div class="row">
+              <div class="col-sm-3 col-12">
+                <h4>چت</h4>
+              </div> <!-- end col-sm-3 -->
+              <div class="col-sm-9 col-12">
+                <nav aria-label="breadcrumb">
+                  <ol class="breadcrumb d-flex justify-content-sm-end align-items-center bg-transparent px-0">
+                    <li class="breadcrumb-item active"><a href="index.html">خانه</a></li>
+                    <li class="breadcrumb-item">چت</li>
+                  </ol>
+                </nav>
+              </div> <!-- end col-sm-9 -->
+            </div>
+          </div> <!-- end col-12 -->
+
+          <aside class="col-xl-3 col-lg-4 col-12 mb-3 ">
+            <div class="card chat-list bg-light">
+              <div class="card-body chat-list__body">
+                <form class="form-inline w-100 mb-2">
+                  <div class="input-group w-100">
+                    <input type="search" class="form-control" placeholder="جستجو ...">
+                  </div>
+                </form> <!-- end form -->
+                <div class="slimscroll-box">
+                  <ul class="nav mt-4 d-flex flex-column chat-list__items">
+                    <li class="mw-100">
+                      <a data-toggle="tab" href="#user1" class="d-flex chat-list__item active">
+                        <img src="assets/images/user1.jpg" alt="user" class="chat-list__img rounded-circle">
+                        <div class="d-flex flex-column overflow-hidden">
+                          <h5 class="chat-list__name mb-2 text-truncate">مهدی میری</h5>
+                          <span class="chat-list__message text-truncate">لورم ایپسوم متن ساختگی با تولید سادگی از صنعت
+                            چاپ
+                            طراحان گرافیک است.</span>
+                        </div>
+                        <div class="mr-auto d-flex flex-column justify-content-between">
+                          <span class="chat-list__time text-nowrap">2:09 ب.ظ</span>
+                        </div>
+                      </a>
+                    </li>
+                    <li class="mw-100">
+                      <a data-toggle="tab" href="#user2" class="d-flex chat-list__item">
+                        <img src="assets/images/user2.jpg" alt="user" class="chat-list__img rounded-circle">
+                        <div class="d-flex flex-column overflow-hidden">
+                          <h5 class="chat-list__name mb-2 text-truncate">علی رجبی</h5>
+                          <span class="chat-list__message text-truncate">سلام چطوری خوبی؟</span>
+                        </div>
+                        <div class="mr-auto d-flex flex-column justify-content-between">
+                          <span class="chat-list__time text-nowrap">دیروز</span>
+                          <span class="chat-list__count badge badge-pill badge-secondary mr-auto">3</span>
+                        </div>
+                      </a>
+                    </li>
+                    <li class="mw-100">
+                      <a data-toggle="tab" href="#user3" class="d-flex chat-list__item">
+                        <img src="assets/images/user3.jpg" alt="user" class="chat-list__img rounded-circle">
+                        <div class="d-flex flex-column overflow-hidden">
+                          <h5 class="chat-list__name mb-2 text-truncate">سارا رضایی</h5>
+                          <span class="chat-list__message text-truncate">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم
+                            از
+                            صنعت چاپ</span>
+                        </div>
+                        <div class="mr-auto d-flex flex-column justify-content-between">
+                          <span class="chat-list__time text-nowrap">1400/05/15</span>
+                          <span class="chat-list__count badge badge-pill badge-secondary mr-auto">12</span>
+                        </div>
+                      </a>
+                    </li>
+                    <li class="mw-100">
+                      <a data-toggle="tab" href="#user4" class="d-flex chat-list__item">
+                        <img src="assets/images/user4.png" alt="user" class="chat-list__img rounded-circle">
+                        <div class="d-flex flex-column overflow-hidden">
+                          <h5 class="chat-list__name mb-2 text-truncate">محسن غلامی</h5>
+                          <span class="chat-list__message text-truncate">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم
+                            از
+                            صنعت چاپ</span>
+                        </div>
+                        <div class="mr-auto d-flex flex-column justify-content-between">
+                          <span class="chat-list__time text-nowrap">1400/05/13</span>
+                          <span class="chat-list__count badge badge-pill badge-secondary mr-auto">31</span>
+                        </div>
+                      </a>
+                    </li>
+                    <li class="mw-100">
+                      <a data-toggle="tab" href="#user5" class="d-flex chat-list__item">
+                        <img src="assets/images/user.jpg" alt="user" class="chat-list__img rounded-circle">
+                        <div class="d-flex flex-column overflow-hidden">
+                          <h5 class="chat-list__name mb-2 text-truncate">رضا محمدی</h5>
+                          <span class="chat-list__message text-truncate">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم
+                            از
+                            صنعت چاپ</span>
+                        </div>
+                        <div class="mr-auto d-flex flex-column justify-content-between">
+                          <span class="chat-list__time text-nowrap">1400/05/10</span>
+                          <span class="chat-list__count badge badge-pill badge-secondary mr-auto">4</span>
+                        </div>
+                      </a>
+                    </li>
+                  </ul> <!-- end chat-list -->
+                </div>
+              </div> <!-- end card-body -->
+            </div> <!-- end card -->
+          </aside> <!-- end col-xl-3 -->
+
+          <section class="col-xl-9 col-lg-8 col-12 mb-3">
+            <div class="card chat-content">
+              <div class="card-body p-0 d-flex flex-column justify-content-between">
+                <div class="chat-content__header">
+                  <h5 class="chat-content__header--name"></h5>
+                  <span class="chat-content__header--staus d-flex align-items-center mt-2">
+                    <i class="fas fa-circle text-success ml-1"></i>
+                    آنلاین
+                  </span>
+                </div> <!-- end chat-content__header -->
+
+                <div class="chat-content__body d-flex flex-column justify-content-end flex-grow-1 mx-3 mb-3">
+                  <div class="tab-content slimscroll-box">
+                    <div id="user1" class="chat-content__list tab-pane fade in active show">
+                      <span class="chat-content__list--time my-3">امروز, 02:09 ب.ظ</span>
+                      <p class="chat-content__list--text user d-flex flex-column">سلام چطوی خوبی؟
+                        <span class="chat-content__list--text-time">02:09 ب.ظ</span>
+                      </p>
+                      <p class="chat-content__list--text admin">سلام ممنون
+                        <span class="chat-content__list--text-time">02:19 ب.ظ</span>
+                      </p>
+                      <p class="chat-content__list--text user">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت
+                        چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که
+                        لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می
+                        باشد.
+                        <span class="chat-content__list--text-time">02:23 ب.ظ</span>
+                      </p>
+                      <p class="chat-content__list--text admin">😍😎😍
+                        <span class="chat-content__list--text-time">02:25 ب.ظ</span>
+                      </p>
+                      <p class="chat-content__list--text admin">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت
+                        چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که
+                        لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می
+                        باشد.
+                        <span class="chat-content__list--text-time">02:27 ب.ظ</span>
+                      </p>
+                      <p class="chat-content__list--text admin">خداحافظ
+                        <span class="chat-content__list--text-time">02:19 ب.ظ</span>
+                      </p>
+                    </div>
+                    <div id="user2" class="chat-content__list tab-pane fade">
+                      <span class="chat-content__list--time my-3">دیروز, 02:30 ق.ظ</span>
+                      <p class="chat-content__list--text user d-flex flex-column">سلام چطوی خوبی؟
+                        <span class="chat-content__list--text-time">02:30 ق.ظ</span>
+                      </p>
+                      <p class="chat-content__list--text admin">سلام ممنون
+                        <span class="chat-content__list--text-time">02:35 ق.ظ</span>
+                      </p>
+                      <p class="chat-content__list--text user">این قالب رایگانه؟
+                        <span class="chat-content__list--text-time">02:38 ق.ظ</span>
+                      </p>
+                      <p class="chat-content__list--text admin">بله رایگانه
+                        <span class="chat-content__list--text-time">02:50 ق.ظ</span>
+                      </p>
+                      <p class="chat-content__list--text user">ممنون 😍
+                        <span class="chat-content__list--text-time">02:56 ق.ظ</span>
+                      </p>
+                    </div>
+                    <div id="user3" class="chat-content__list tab-pane fade">
+                      <span class="chat-content__list--time my-3">1400/05/15, 08:36 ق.ظ</span>
+                      <p class="chat-content__list--text user d-flex flex-column">سلام
+                        <span class="chat-content__list--text-time">08:36 ق.ظ</span>
+                      </p>
+                      <p class="chat-content__list--text admin">سلام
+                        <span class="chat-content__list--text-time">08:40 ق.ظ</span>
+                      </p>
+                      <p class="chat-content__list--text user">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ
+                        و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که
+                        لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می
+                        باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد
+                        تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در
+                        زبان فارسی ایجاد کرد. در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها و
+                        شرایط سخت تایپ به پایان رسد وزمان مورد نیاز شامل حروفچینی دستاوردهای اصلی و جوابگوی سوالات
+                        پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.
+                        <span class="chat-content__list--text-time">08:45 ق.ظ</span>
+                      </p>
+                      <p class="chat-content__list--text admin">مرسی
+                        <span class="chat-content__list--text-time">08:49 ق.ظ</span>
+                      </p>
+                    </div>
+                    <div id="user4" class="chat-content__list tab-pane fade">
+                      <span class="chat-content__list--time my-3">دیروز, 05:25 ب.ظ</span>
+                      <p class="chat-content__list--text user d-flex flex-column">سلام خوبی؟
+                        <span class="chat-content__list--text-time">05:25 ب.ظ</span>
+                      </p>
+                      <p class="chat-content__list--text admin">سلام ممنون
+                        <span class="chat-content__list--text-time">08:35 ب.ظ</span>
+                      </p>
+                    </div>
+                    <div id="user5" class="chat-content__list tab-pane fade">
+                      <span class="chat-content__list--time my-3">1400/05/10, 09:23 ب.ظ</span>
+                      <p class="chat-content__list--text user d-flex flex-column">سلام چطوی؟
+                        <span class="chat-content__list--text-time">09:23 ب.ظ</span>
+                      </p>
+                      <p class="chat-content__list--text admin">سلام مرسی
+                        <span class="chat-content__list--text-time">10:35 ب.ظ</span>
+                      </p>
+                      <p class="chat-content__list--text admin">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت
+                        چاپ و با استفاده از طراحان گرافیک است.
+                        <span class="chat-content__list--text-time">10:50 ب.ظ</span>
+                      </p>
+                      <p class="chat-content__list--text user">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ
+                        و با استفاده از طراحان گرافیک است.
+                        <span class="chat-content__list--text-time">10:56 ب.ظ</span>
+                      </p>
+                    </div>
+                  </div> <!-- end tab-content -->
+                </div> <!-- end chat-content__body -->
+
+                <div class="chat-content__footer d-flex align-items-center px-3">
+                  <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                      <a href="" class="input-group-text chat-content__footer--btn"><i
+                          class="fas fa-paper-plane"></i></a>
+                    </div>
+                    <input type="text" class="form-control chat-content__footer--input px-0"
+                      placeholder="پیام خود را بنویسید ...">
+                    <div class="input-group-prepend">
+                      <a href="" class="input-group-text chat-content__footer--btn"><i class="fas fa-paperclip"></i></a>
+                    </div>
+                  </div>
+                </div> <!-- end chat-content__footer -->
+              </div> <!-- end card-body -->
+            </div> <!-- end card -->
+          </section> <!-- end col-xl-9 -->
+
+        </div> <!-- end row -->
+      </section> <!-- end container-fluid -->
+    </main> <!-- end main -->
+    <!--====== ↑ End Main ↑ ======-->
+  </div>
+  <!--======== ↑ End Wrapper ↑ ========-->
+
+  <!--======= ↓ Start Footer ↓ =======-->
+  <footer class="main-footer d-flex align-items-center">
+    <div class="container-fluid">
+      <p class="main-footer__copyright text-center">
+        2021 © theme by
+        <a href="mailto:miladshahsavari1@gmail.com" class="main-footer__copyright--link" target="_top">Milad
+          Shahsavari</a>
+      </p>
+    </div>
+  </footer>
+  <!--======== ↑ End Footer ↑ ========-->
+
+
+  <!--================== ↓ Scripts ↓ ==================-->
+  <script src="assets/js/jquery-3.6.0.min.js"></script>
+  <script src="assets/js/jquery.mousewheel.min.js"></script>
+  <script src="assets/js/popper.min.js"></script>
+  <script src="assets/js/bootstrap.min.js"></script>
+  <script src="assets/js/fontawesome.min.js"></script>
+  <script src="assets/js/prettify.min.js"></script>
+  <script src="assets/js/jquery.slimscroll.min.js"></script>
+  <script src="assets/js/script.js"></script>
+  <script>
+    const chatHeaderName = document.querySelector('.chat-content__header--name'),
+      chatItems = document.querySelector('.chat-list__items')
+
+    Array.from(chatItems.children).forEach(item => {
+      Array.from(item.children).forEach(name => {
+        let listName = name.querySelector('.chat-list__name')
+        if (name.classList.contains('active')) {
+          chatHeaderName.innerHTML = listName.innerHTML
+        }
+        name.addEventListener('click', e => {
+          chatHeaderName.innerHTML = listName.innerHTML
+        });
+      })
+    })
+  </script>
+</body>
+
+</html>

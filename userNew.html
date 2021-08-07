@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Admin Panel" />
+  <meta name="author" content="MiladShahsavari" />
+  <title>پنل مدیریت | ایجاد کاربر جدید</title>
+  <!--====== ↓ Styles ↓ ======-->
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/fontawesome.min.css">
+  <link rel="stylesheet" href="assets/css/fonts.css">
+  <link rel="stylesheet" href="assets/css/reset.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+  <!--====== ↓ Favicon ↓ ======-->
+  <link rel="icon" href="assets/images/favicon.png">
+</head>
+
+<body class="d-flex flex-column min-vh-100">
+
+  <!--======= ↓ Start Header ↓ =======-->
+  <header class="position-fixed fixed-top">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-12 px-0">
+          <nav class="navbar main-navbar d-flex">
+            <div class="main-navbar__right col-sm-9 d-flex align-items-center p-0">
+              <span class="main-navbar__right--logo">
+                <h5>پنل مدیریت</h5>
+              </span> <!-- end main-navbar__right--logo -->
+
+              <a class="nav-link sidebar-toggler__button plus">
+                <span class="sidebar-toggler"></span>
+              </a> <!-- end sidebar-toggler__button -->
+
+              <form class="form-inline main-navbar__search mr-4">
+                <div class="input-group w-100">
+                  <div class="input-group-prepend d-flex align-items-center w-100">
+                    <input class="form-control input-style border-0 position-relative w-100" type="search"
+                      placeholder="جستجو ..." aria-label="Search">
+                    <div
+                      class="input-group-text bg-transparent border-0 position-absolute p-0 main-navbar__search--btn">
+                      <button type="submit" class="btn d-flex"><i class="fas fa-search text-secondary"></i></button>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div> <!-- end main-navbar__right -->
+
+            <div class="main-navbar__left col-sm-3 d-flex justify-content-end p-0 mt-3 mt-sm-0">
+              <ul class="d-flex align-items-center">
+
+                <li class="dropdown position-relative">
+                  <a href="#!" class="text-light position-relative dropdown-toggle" data-toggle="dropdown">
+                    <i class="fas fa-bell header-notifications--icon"></i>
+                    <span
+                      class="badge badge-danger rounded-circle header-notifications--badge position-absolute">7</span>
+                  </a>
+
+                  <div class="dropdown-menu header-dropdown__menu p-0 dropdown-slideIn dropdown-animate"
+                    id="header-dropdown__menu">
+                    <div class="position-relative header-dropdown__menu--content">
+                      <h5
+                        class="dropdown-item notifications-title d-flex justify-content-between align-items-center my-2 px-3 py-2"
+                        href="#">
+                        <span>اعلان ها</span>
+                        <a href="#!" class="text-light">
+                          <small>خواندن همه</small>
+                        </a>
+                      </h5>
+
+                      <div class="slimscroll-box">
+                        <a class="dropdown-item header-dropdown__item d-flex align-items-center" href="#">
+                          <span
+                            class="notifications-icon bg-warning rounded-pill d-flex align-items-center justify-content-center">
+                            <i class="fas fa-user-plus"></i>
+                          </span>
+                          <p class="notifications-details d-flex flex-column mr-2">
+                            کاربر جدید ثبت نام کرد
+                            <span class="notifications-details--footer">38 دقیقه
+                              پیش</span>
+                          </p>
+                        </a>
+
+                        <a class="dropdown-item header-dropdown__item d-flex align-items-center" href="#">
+                          <span class="notifications-icon rounded-pill">
+                            <img src="assets/images/user1.jpg" class="rounded-pill mw-100" alt="">
+                          </span>
+                          <p class="notifications-details d-flex flex-column mr-2">
+                            رضا محمدی
+                            <span class="notifications-details--footer">سلام ممنون پست
+                              خوبی بود</span>
+                          </p>
+                        </a>
+
+                        <a class="dropdown-item header-dropdown__item d-flex align-items-center" href="#">
+                          <span class="notifications-icon rounded-pill">
+                            <img src="assets/images/user2.jpg" class="rounded-pill mw-100" alt="">
+                          </span>
+                          <div class="notifications-details d-flex flex-column mr-2">
+                            علی حسینی
+                            <p class="notifications-details--footer">در دوره جاوا
+                              اسکریپت ثبت نام کرد </p>
+                          </div>
+                        </a>
+
+                        <a class="dropdown-item header-dropdown__item d-flex align-items-center" href="#">
+                          <span class="notifications-icon rounded-pill">
+                            <img src="assets/images/user4.png" class="rounded-pill mw-100" alt="">
+                          </span>
+                          <div class="notifications-details d-flex flex-column mr-2">
+                            محمد غلامی
+                            <p class="notifications-details--footer">ممنون پست خوبی بود
+                            </p>
+                          </div>
+                        </a>
+
+                        <a class="dropdown-item header-dropdown__item d-flex align-items-center" href="#">
+                          <span class="notifications-icon rounded-pill">
+                            <img src="assets/images/user3.jpg" class="rounded-pill mw-100" alt="">
+                          </span>
+                          <div class="notifications-details d-flex flex-column mr-2">
+                            زهرا محمدی
+                            <p class="notifications-details--footer">در دوره جاوا
+                              اسکریپت ثبت نام کرد </p>
+                          </div>
+                        </a>
+
+                      </div>
+
+                      <a class="dropdown-item header-dropdown__item notifications-view text-center text-primary py-3"
+                        href="#">مشاهده
+                        همه</a>
+                    </div> <!-- position-relative -->
+                  </div> <!-- end dropdown-menu -->
+
+                </li> <!-- end dropdown -->
+
+                <li class="dropdown mr-3 position-relative">
+                  <a href="#!" class="text-light dropdown-toggle d-flex align-items-center" data-toggle="dropdown">
+                    <img src="assets/images/admin.jpg" class="header-admin__img rounded-pill" alt="admin">
+                    <span class="text-light mx-1">
+                      میلاد
+                    </span>
+                    <i class="fas fa-angle-down"></i>
+                  </a>
+
+                  <div
+                    class="dropdown-menu header-dropdown__menu header-dropdown__profile p-0 h-auto dropdown-slideIn dropdown-animate">
+                    <a class="dropdown-item header-dropdown__item d-flex align-items-center" href="profile.html">
+                      <span class="rounded-pill d-flex align-items-center justify-content-center ml-2">
+                        <i class="far fa-user"></i>
+                      </span>
+                      <div class="notifications-details d-flex flex-column">
+                        پروفایل
+                      </div>
+                    </a>
+
+                    <a class="dropdown-item header-dropdown__item d-flex align-items-center" href="#">
+                      <span class="rounded-pill d-flex align-items-center justify-content-center ml-2">
+                        <i class="fas fa-cog"></i>
+                      </span>
+                      <div class="notifications-details d-flex flex-column">
+                        تنظیمات
+                      </div>
+                    </a>
+
+                    <a class="dropdown-item header-dropdown__item d-flex align-items-center" href="#">
+                      <span class="rounded-pill d-flex align-items-center justify-content-center ml-2">
+                        <i class="fas fa-lock"></i>
+                      </span>
+                      <div class="notifications-details d-flex flex-column">
+                        قفل کردن
+                      </div>
+                    </a>
+
+                    <a class="dropdown-item header-dropdown__item d-flex align-items-center" href="#">
+                      <span class="rounded-pill d-flex align-items-center justify-content-center ml-2">
+                        <i class="fas fa-sign-out-alt"></i>
+                      </span>
+                      <div class="notifications-details d-flex flex-column">
+                        خروج
+                      </div>
+                    </a>
+
+
+
+                  </div> <!-- end dropdown-menu -->
+                </li> <!-- end dropdown -->
+
+              </ul>
+            </div> <!-- end main-navbar__left -->
+          </nav> <!-- end navbar -->
+        </div>
+      </div>
+    </div>
+  </header>
+  <!--======== ↑ End Header ↑ ========-->
+
+  <!--======= ↓ Start Wrapper ↓ =======-->
+  <div class="wrapper d-flex">
+    <!--===== ↓ Start Sidebar ↓ =====-->
+    <aside class="sidebar py-3 position-fixed slimscroll-box">
+      <div class="sidebar__user mb-3">
+        <div class="sidebar__user--img mx-auto">
+          <img src="assets/images/admin.jpg" alt="user-img" class="img-thumbnail rounded-pill sidebar__avatar">
+        </div> <!-- end sidebar__user--img -->
+        <div class="sidebar__usertitle d-flex flex-column justify-content-center mt-2">
+          <span class="sidebar__usertitle--name text-center font-weight-bold mb-2">
+            میلاد شهسواری
+          </span>
+          <span class="sidebar__usertitle--job text-center">
+            مدیر کل
+          </span>
+        </div> <!-- end sidebar__usertitle -->
+
+        <div class="sidebar__user--panel d-flex justify-content-center mt-3">
+          <a href="profile.html" class="mx-2" data-toggle="tooltip" data-placement="top" title="پروفایل">
+            <i class="far fa-user sidebar__user--panel-icon"></i>
+          </a>
+          <a href="chat.html" class="mx-2" data-toggle="tooltip" data-placement="top" title="چت">
+            <i class="far fa-comment-dots sidebar__user--panel-icon"></i>
+          </a>
+          <a href="login.html" class="mx-2" data-toggle="tooltip" data-placement="top" title="خروج">
+            <i class="fas fa-power-off sidebar__user--panel-icon"></i>
+          </a>
+        </div> <!-- end sidebar__user--panel -->
+      </div> <!-- end sidebar__user -->
+
+      <ul class="nav flex-column sidebar__menu">
+        <li class="nav-item sidebar__menu--item">
+          <a class="nav-link sidebar__menu--link d-flex align-items-center" href="#">
+            <i class="fas fa-tachometer-alt mb-1 sidebar__menu--icon"></i>
+            <span class="flex-grow-1 mr-2">داشبورد</span>
+            <span class="sidebar__menu--arrow"></span>
+          </a> <!-- end sidebar__menu--link -->
+          <ul class="nav sidebar__menu--sub mr-4">
+            <li class="nav-item sidebar__menu--sub-item ">
+              <a class="nav-link sidebar__menu--sub-link" href="index.html">داشبورد اول</a>
+            </li>
+            <li class="nav-item sidebar__menu--sub-item">
+              <a class="nav-link sidebar__menu--sub-link" href="index2.html">داشبورد دوم</a>
+            </li>
+          </ul> <!-- end sidebar__menu--sub -->
+        </li> <!-- end sidebar__menu--item -->
+
+        <li class="nav-item sidebar__menu--item">
+          <a class="nav-link sidebar__menu--link d-flex align-items-center" href="#">
+            <i class="fas fa-envelope mb-1 sidebar__menu--icon"></i>
+            <span class="flex-grow-1 mr-2">ایمیل</span>
+            <div class="pulse"></div>
+            <span class="sidebar__menu--arrow"></span>
+          </a> <!-- end sidebar__menu--link -->
+          <ul class="nav sidebar__menu--sub mr-4">
+            <li class="nav-item sidebar__menu--sub-item">
+              <a class="nav-link sidebar__menu--sub-link" href="inbox.html">
+                صندوق ورودی
+              </a>
+            </li>
+            <li class="nav-item sidebar__menu--sub-item">
+              <a class="nav-link sidebar__menu--sub-link" href="compose.html">
+                ایجاد ایمیل
+              </a>
+            </li>
+            <li class="nav-item sidebar__menu--sub-item">
+              <a class="nav-link sidebar__menu--sub-link" href="inbox.html">
+                ارسال شده
+              </a>
+            </li>
+          </ul> <!-- end sidebar__menu--sub -->
+        </li> <!-- end sidebar__menu--item -->
+
+        <li class="nav-item sidebar__menu--item">
+          <a class="nav-link sidebar__menu--link d-flex align-items-center" href="#">
+            <i class="fas fa-file-alt mb-1 sidebar__menu--icon"></i>
+            <span class="flex-grow-1 mr-2">صفحات</span>
+            <span class="sidebar__menu--arrow"></span>
+          </a> <!-- end sidebar__menu--link -->
+          <ul class="nav sidebar__menu--sub mr-4">
+            <li class="nav-item sidebar__menu--sub-item">
+              <a class="nav-link sidebar__menu--sub-link" href="pages.html">
+                همه صفحات
+              </a>
+            </li>
+            <li class="nav-item sidebar__menu--sub-item">
+              <a class="nav-link sidebar__menu--sub-link" href="pageNew.html">
+                صفحه جدید
+              </a>
+            </li>
+          </ul> <!-- end sidebar__menu--sub -->
+        </li> <!-- end sidebar__menu--item -->
+
+        <li class="nav-item sidebar__menu--item">
+          <a class="nav-link sidebar__menu--link d-flex align-items-center" href="#">
+            <i class="fas fa-newspaper mb-1 sidebar__menu--icon"></i>
+            <span class="flex-grow-1 mr-2">نوشته ها</span>
+            <span class="sidebar__menu--arrow"></span>
+          </a> <!-- end sidebar__menu--link -->
+          <ul class="nav sidebar__menu--sub mr-4">
+            <li class="nav-item sidebar__menu--sub-item">
+              <a class="nav-link sidebar__menu--sub-link" href="posts.html">
+                همه نوشته ها
+              </a>
+            </li>
+            <li class="nav-item sidebar__menu--sub-item">
+              <a class="nav-link sidebar__menu--sub-link" href="postNew.html">
+                افزودن نوشته
+              </a>
+            </li>
+          </ul> <!-- end sidebar__menu--sub -->
+        </li> <!-- end sidebar__menu--item -->
+
+
+        <li class="nav-item sidebar__menu--item">
+          <a class="nav-link sidebar__menu--link d-flex align-items-center" href="comments.html">
+            <i class="fas fa-comments mb-1 sidebar__menu--icon"></i>
+            <span class="flex-grow-1 mr-2">نظرات</span>
+          </a> <!-- end sidebar__menu--link -->
+        </li> <!-- end sidebar__menu--item -->
+
+        <li class="nav-item sidebar__menu--item">
+          <a class="nav-link sidebar__menu--link d-flex align-items-center" href="chat.html">
+            <i class="fas fa-comment-alt mb-1 sidebar__menu--icon"></i>
+            <span class="flex-grow-1 mr-2">چت</span>
+            <div class="pulse"></div>
+          </a> <!-- end sidebar__menu--link -->
+        </li> <!-- end sidebar__menu--item -->
+        
+        <li class="nav-item sidebar__menu--item active">
+          <a class="nav-link sidebar__menu--link d-flex align-items-center" href="#">
+            <i class="fas fa-users mb-1 sidebar__menu--icon"></i>
+            <span class="flex-grow-1 mr-2">کاربران</span>
+            <span class="sidebar__menu--arrow"></span>
+          </a> <!-- end sidebar__menu--link -->
+          <ul class="nav sidebar__menu--sub mr-4">
+            <li class="nav-item sidebar__menu--sub-item">
+              <a class="nav-link sidebar__menu--sub-link" href="users.html">
+                همه کاربران
+              </a>
+            </li>
+            <li class="nav-item sidebar__menu--sub-item active">
+              <a class="nav-link sidebar__menu--sub-link" href="userNew.html">
+                افزودن کاربر جدید
+              </a>
+            </li>
+            <li class="nav-item sidebar__menu--sub-item">
+              <a class="nav-link sidebar__menu--sub-link" href="profile.html">
+                پروفایل
+              </a>
+            </li>
+          </ul> <!-- end sidebar__menu--sub -->
+        </li> <!-- end sidebar__menu--item -->
+
+        <li class="nav-item sidebar__menu--item">
+          <a class="nav-link sidebar__menu--link d-flex align-items-center" href="#">
+            <i class="fas fa-plus-square mb-1 sidebar__menu--icon"></i>
+            <span class="flex-grow-1 mr-2">بیشتر</span>
+            <span class="sidebar__menu--arrow"></span>
+          </a> <!-- end sidebar__menu--link -->
+          <ul class="nav sidebar__menu--sub mr-4">
+            <li class="nav-item sidebar__menu--sub-item">
+              <a class="nav-link sidebar__menu--sub-link" href="404.html">
+                صفحه 404
+              </a>
+            </li>
+            <li class="nav-item sidebar__menu--sub-item">
+              <a class="nav-link sidebar__menu--sub-link" href="500.html">
+                صفحه 500
+              </a>
+            </li>
+            <li class="nav-item sidebar__menu--sub-item">
+              <a class="nav-link sidebar__menu--sub-link" href="lockScreen.html">
+                صفحه قفل
+              </a>
+            </li>
+            <li class="nav-item sidebar__menu--sub-item">
+              <a class="nav-link sidebar__menu--sub-link" href="register.html">
+                صفحه ثبت نام
+              </a>
+            </li>
+            <li class="nav-item sidebar__menu--sub-item">
+              <a class="nav-link sidebar__menu--sub-link" href="login.html">
+                صفحه ورود
+              </a>
+            </li>
+          </ul> <!-- end sidebar__menu--sub -->
+        </li> <!-- end sidebar__menu--item -->
+
+      </ul> <!-- end sidebar__menu -->
+
+    </aside>
+    <!--====== ↑ End Sidebar ↑ ======-->
+
+    <!--===== ↓ Start Main ↓ =====-->
+    <main class="main w-100 min-vh-100">
+      <section class="container-fluid mt-4">
+        <div class="row">
+          <div class="col-12">
+            <div class="row">
+              <div class="col-sm-3 col-12">
+                <h4>ایجاد کاربر جدید</h4>
+              </div> <!-- end col-sm-3 -->
+              <div class="col-sm-9 col-12">
+                <nav aria-label="breadcrumb">
+                  <ol class="breadcrumb d-flex justify-content-sm-end align-items-center bg-transparent px-0">
+                    <li class="breadcrumb-item active"><a href="index.html">خانه</a></li>
+                    <li class="breadcrumb-item">ایجاد کاربر جدید</li>
+                  </ol>
+                </nav>
+              </div> <!-- end col-sm-9 -->
+            </div>
+          </div> <!-- end col-12 -->
+
+          <section class="col-12">
+            <form class="mb-3">
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                  <label for="inputUsername" class="text-dark">نام کاربری *</label>
+                  <input type="email" class="form-control mt-2" id="inputUsername">
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="inputEmail" class="text-dark">ایمیل *</label>
+                  <input type="email" class="form-control mt-2" id="inputEmail">
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                  <label for="inputName" class="text-dark">نام و نام خانوادگی</label>
+                  <input type="text" class="form-control mt-2" id="inputName">
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="inputPassword" class="text-dark">رمز عبور *</label>
+                  <input type="password" class="form-control mt-2" id="inputPassword">
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group col-md-4">
+                  <label for="inputRole" class="text-dark">نقش کاربر</label>
+                  <select id="inputRole" class="form-control mt-2">
+                    <option selected>کاربر عادی</option>
+                    <option>نویسنده</option>
+                    <option>مدیر کل</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="ui-checkbox mr-0 user-new__checkbox">
+                  <input type="checkbox" id="toggle-checkbox">
+                  <span class="checkmark ml-2"></span>
+                  ارسال ایمیل مربوط به جزئیات حساب، به کاربران جدید.
+                </label>
+              </div>
+              <button type="submit" class="btn btn-primary btn-sm user-new__btn px-3">افزودن</button>
+            </form>
+          </section> <!-- end col-12 -->
+
+        </div> <!-- end row -->
+      </section> <!-- end container-fluid -->
+    </main> <!-- end main -->
+    <!--====== ↑ End Main ↑ ======-->
+  </div>
+  <!--======== ↑ End Wrapper ↑ ========-->
+
+  <!--======= ↓ Start Footer ↓ =======-->
+  <footer class="main-footer d-flex align-items-center">
+    <div class="container-fluid">
+      <p class="main-footer__copyright text-center">
+        2021 © theme by
+        <a href="mailto:miladshahsavari1@gmail.com" class="main-footer__copyright--link" target="_top">Milad
+          Shahsavari</a>
+      </p>
+    </div>
+  </footer>
+  <!--======== ↑ End Footer ↑ ========-->
+
+
+  <!--================== ↓ Scripts ↓ ==================-->
+  <script src="assets/js/jquery-3.6.0.min.js"></script>
+  <script src="assets/js/jquery.mousewheel.min.js"></script>
+  <script src="assets/js/popper.min.js"></script>
+  <script src="assets/js/bootstrap.min.js"></script>
+  <script src="assets/js/fontawesome.min.js"></script>
+  <script src="assets/js/prettify.min.js"></script>
+  <script src="assets/js/jquery.slimscroll.min.js"></script>
+  <script src="assets/js/script.js"></script>
+</body>
+
+</html>
